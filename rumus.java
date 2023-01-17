@@ -304,7 +304,7 @@ public class rumus {
 		System.out.println("*Rumus : Waktu / Getaran");
 		System.out.println("=====================================");
 
-		System.out.print("MASUKAN WAKTU GETARAN (s): ");
+		System.out.print("MASUKAN WAKTU GETARAN (t): ");
 		waktu = input.nextFloat();
 		System.out.print("MASUKAN JUMLAH GETARAN: ");
 		jumlah = input.nextInt();
@@ -325,8 +325,38 @@ public class rumus {
 			}
 		}
 	}
-	public static void KIRCHOFF(){
+	public static void CEPATRAMBATGELOMBANG(){
+		float waktu;
+		int jarak;
 
+		clear();
+		System.out.println("=====================================");
+		System.out.println("PERIODE GETARAN");
+		System.out.println("periode getaran adalah waktu yang diperlukan suatu benda untuk melakukan satu kali getaran");
+		System.out.println("=====================================");
+		System.out.println("*Rumus : Volume = Jarak / Waktu");
+		System.out.println("=====================================");
+
+		System.out.print("MASUKAN JARAK (s): ");
+		jarak = input.nextInt();
+		System.out.print("MASUKAN WAKTU (t): ");
+		waktu = input.nextFloat();
+		System.out.println("HASILNYA ADALAH ="+jarak/waktu);
+
+		System.out.print("Ulangi perhitungan (Y/T) : ");
+		while(true){
+			ulangMenu = input.nextLine();
+			if(ulangMenu.equals("Y") || ulangMenu.equals("y"))
+				CEPATRAMBATGELOMBANG();
+			else if(ulangMenu.equals("T") || ulangMenu.equals("t")){
+				System.out.print("Kembali ke Menu Utama (Y/T) : ");
+				ulangMenu = input.nextLine();
+				if(ulangMenu.equals("Y") || ulangMenu.equals("y"))
+					main.main(new String[0]);
+				else if(ulangMenu.equals("T") || ulangMenu.equals("t"))
+					exit();
+			}
+		}
 	}
 	public static void HUKUMOHM(){
 		float V, I;
