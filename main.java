@@ -12,6 +12,8 @@ public class main {
 		System.out.println("2. GLBB");
 		System.out.println("3. ARCHIMEDES");
 		System.out.println("4. PERIODE GETARAN");
+		System.out.println("5. KIRCHOFF");
+		System.out.println("6. HUKUM OHM");
 		System.out.println("0. Exit");
 		System.out.println("==========================");
 
@@ -39,6 +41,10 @@ public class main {
 				break;
 				case 4:
 					rumus.PERIODEGETARAN();
+				case 5:
+					rumus.KIRCHOFF();
+				case 6:
+					rumus.HUKUMOHM();
 				default:
 					System.out.println("Pilihan tidak ada");
 					pilihanMenu=0;

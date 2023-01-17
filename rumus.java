@@ -266,11 +266,14 @@ public class rumus {
 		System.out.println("GAYA ARCHIMEDES");
 		System.out.println("Hukum Archimedes adalah hukum yang menyatakan bahwa setiap benda yang sebagian atau seluruhnya terendam dalam zat cair, atau sebagian zat cair, mempunyai gaya dorong ke atas pada benda tersebut, atau yang sering disebut gaya apung");
 		System.out.println("=====================================");
-		System.out.print("MASUKAN Pf(kg/m) : ");
+		System.out.println("*Rumus : Massa * Gravitasi * Volume");
+		System.out.println("=====================================");
+
+		System.out.print("MASUKAN Massa(kg/m) : ");
 		float pf = input.nextFloat();
-		System.out.print("MASUKAN g(N/kg) : ");
+		System.out.print("MASUKAN Gravitasi(N/kg) : ");
 		int g = input.nextInt();
-		System.out.print("MASUKAN Vf(m):");
+		System.out.print("MASUKAN Volume Benda Tercelup(m):");
 		int Vf = input.nextInt();
 		System.out.println(" HASILNYA ADALAH = " + pf*g*Vf);
 
@@ -298,6 +301,9 @@ public class rumus {
 		System.out.println("PERIODE GETARAN");
 		System.out.println("periode getaran adalah waktu yang diperlukan suatu benda untuk melakukan satu kali getaran");
 		System.out.println("=====================================");
+		System.out.println("*Rumus : Waktu / Getaran");
+		System.out.println("=====================================");
+
 		System.out.print("MASUKAN WAKTU GETARAN (s): ");
 		waktu = input.nextFloat();
 		System.out.print("MASUKAN JUMLAH GETARAN: ");
@@ -317,6 +323,53 @@ public class rumus {
 				else if(ulangMenu.equals("T") || ulangMenu.equals("t"))
 					exit();
 			}
+		}
+	}
+	public static void KIRCHOFF(){
+
+	}
+	public static void HUKUMOHM(){
+		float V, I;
+		clear();
+		System.out.println("=====================================");
+		System.out.println("Hukum OHM");
+		System.out.println("Hukum OHM adalah suatu pernyataan bahwa besar tegangan listrik pada sebuah penghantar berbanding lurus dengan arus listrik yang mengaliri penghantar");
+		System.out.println("=====================================");
+		System.out.println("*Rumus HUKUM OHM Adalah : R=V/I");
+		System.out.println("Mencari Hambatan Listrik (R). Dengan Memasukan Beda Potensial (V) dan Kuat Arus Listrik (I)");
+		System.out.println("=====================================");
+		System.out.print("Masukan Beda Potensial[ V ] = ");
+		V = input.nextFloat();
+		System.out.print("Masukan  Arus Listrik [ I ] = ");
+		I = input.nextFloat();
+		double R=0;
+		R = V/I;
+		System.out.println("Diketahui : ");
+		System.out.println("Beda Potensial [V] Adalah "+V);
+		System.out.println("Kuat Arus Listrik [I] Adalah "+I);
+		System.out.println("Maka, R = V/I Adalah "+R);
+		System.out.println("-------------------------------------------------------------------------------------------");
+
+		System.out.print("Ada Sebuah Studi Kasus.. "
+		+ "\nJika Anda Mau Menghitung Tekan [1] atau Tekan [2] Untuk Ke Menu Sebelumnya : ");
+
+		int pilihmenu = input.nextInt();
+		if (pilihmenu == 1) {
+			System.out.println("[ Study Kasus (1) ]");
+			System.out.println("-------------------");
+			System.out.println("Mencari, Hambatan Listrik (R) dengan Beda Potensial 12 Volt dan Kuat Arus Listrik 2 A. Berapa Hambatan Listrik yan didapat");
+			System.out.print("Masukan [ V ] = ");
+			float V1 = input.nextFloat();
+			System.out.print("Masukan [ I ] = ");
+			float I1 = input.nextFloat();
+			double R1 = 0;
+			R1 = (V1/I1);
+			System.out.println("Maka, Hambatan Listrik yang diperoleh adalah "+R1);
+			System.out.println("-------------------------------------------------");
+		}
+		else if (pilihmenu==2) {
+			System.out.println("Silahkan Pilih Menu Yang Lain.. Terima Kasih");
+			System.out.println("-------------------------------------------------------------------------------------------");
 		}
 	}
 	public static void clear(){
